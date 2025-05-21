@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d1f7b5;
+  color: #1e3924;
+}
+ 
+.top-bar {
+  background-color: #5ba140;
+  padding: 15px 20px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+ 
+.top-bar span {
+  font-size: 18px;
+}
+ 
+.menu-icon {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #d1f7b5;
+}
+ 
+.folha-icon {
+  height: 30px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+ 
+#side-menu {
+  position: fixed;
+  top: 0;
+  right: -270px;
+  width: 250px;
+  height: 100%;
+  background-color: #a1cc42;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -3px 0 6px rgba(0,0,0,0.2);
+  padding-top: 60px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+ 
+#side-menu.open {
+  right: 0;
+}
+ 
+#side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+#side-menu ul li {
+  border-bottom: 1px solid #d5ed9c;
+}
+ 
+#side-menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+ 
+#side-menu ul li a:hover {
+  background-color: #8ab635;
+}
+ 
+.conteudo {
+  padding: 40px 20px;
+  text-align: center;
+}
+ 
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  background-color: #a1cc42;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: #1c3a14;
+  margin-top: 10px;
+}
+ 
+h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+ 
+.sobre h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #1c3a14;
+}
+ 
+.sobre p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 10px auto;
+}
+ 
+.rodape {
+  background-color: #5ba140;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+ 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+    padding: 8px 16px;
+  }
+ 
+  .top-bar span {
+    font-size: 16px;
+  }
+ 
+  #side-menu {
+    width: 200px;
+  }
+ 
+  #side-menu ul li a {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+}
