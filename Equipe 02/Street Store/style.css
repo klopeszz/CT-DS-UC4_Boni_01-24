@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  /* font-family 'Roboto', sans-serif; */
+  /* background-color #d1f7b5; */
+  /* color #1e3924; */
+}
+ 
+/* Top bar com menu horizontal */
+.top-bar {
+  background-color: #5ba140;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+ 
+.folha-icon {
+  height: 30px;
+}
+ 
+nav.menu {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+ 
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+ 
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+ 
+.menu-list li a:hover {
+  background-color: #4a8b2e;
+}
+ 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+ 
+/* Conteúdo principal */
+.conteudo {
+  padding: 40px 20px;
+  text-align: center;
+}
+ 
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  background-color: #a1cc42;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: #1c3a14;
+  margin-top: 10px;
+}
+ 
+h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+ 
+.sobre h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #1c3a14;
+}
+ 
+.sobre p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 10px auto;
+}
+ 
+.rodape {
+  background-color: #5ba140;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    background-color: #5ba140;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    width: 180px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+ 
+  .menu-list.show {
+    display: flex;
+  }
+ 
+  .menu-list li {
+    padding: 10px;
+  }
+ 
+  .menu-toggle {
+    display: block;
+  }
+}
+ 
+ 
