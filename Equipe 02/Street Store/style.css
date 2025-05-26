@@ -1,132 +1,126 @@
 body {
-  margin: 0;
-  /* font-family 'Roboto', sans-serif; */
-  /* background-color #d1f7b5; */
-  /* color #1e3924; */
-}
- 
-/* Top bar com menu horizontal */
-.top-bar {
-  background-color: #5ba140;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
- 
-.folha-icon {
-  height: 30px;
-}
- 
-nav.menu {
-  flex-grow: 1;
-  margin-left: 20px;
-}
- 
-.menu-list {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d1f7b5;
+  color: #1e3924;
   margin: 0;
   padding: 0;
 }
- 
-.menu-list li a {
+
+.top-bar {
+  background-color: #5ba140;
+  padding: 15px 20px;
   color: white;
-  text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  padding: 6px 8px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
- 
-.menu-list li a:hover {
-  background-color: #4a8b2e;
-}
- 
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
+
+.menu-icon {
+  font-size: 26px;
   cursor: pointer;
 }
- 
-/* Conteúdo principal */
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: -270px;
+  width: 250px;
+  height: 100%;
+  background-color: #a1cc42;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 3px 0 6px rgba(0,0,0,0.2);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+#side-menu.open {
+  left: 0;
+}
+
+#side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#side-menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+#side-menu ul li a:hover {
+  background-color: #8ab635;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
 .conteudo {
   padding: 40px 20px;
   text-align: center;
 }
- 
+
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 38px;
+  font-size: 32px;
   background-color: #a1cc42;
   display: inline-block;
   padding: 10px 20px;
   border-radius: 15px;
   color: #1c3a14;
-  margin-top: 10px;
-}
- 
-h2 {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
- 
-.sobre h3 {
-  font-size: 20px;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.sobre-nos {
+  margin-top: 30px;
+}
+
+.sobre-nos h2 {
+  font-size: 24px;
   color: #1c3a14;
 }
- 
-.sobre p {
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 750px;
-  margin: 10px auto;
+
+.loja-card, .contato-card {
+  background-color: #a1cc42;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 16px;
+  color: #1c3a14;
 }
- 
-.rodape {
-  background-color: #5ba140;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
-  margin-top: 40px;
+
+.loja-card strong a {
+  color: #1c3a14;
+  text-decoration: none;
 }
- 
-/* Responsividade */
-@media (max-width: 768px) {
-  .menu-list {
-    display: none;
-    flex-direction: column;
-    background-color: #5ba140;
-    position: absolute;
-    top: 55px;
-    right: 20px;
-    width: 180px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
   }
- 
-  .menu-list.show {
-    display: flex;
-  }
- 
-  .menu-list li {
-    padding: 10px;
-  }
- 
-  .menu-toggle {
-    display: block;
+  .menu-icon {
+    font-size: 22px;
   }
 }
- 
- 

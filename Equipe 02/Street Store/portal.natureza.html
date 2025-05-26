@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Natureza - Raízes do Amanhã</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .titulo-menor {
+      font-size: 14px;
+      color: #1c3a14;
+    }
+    .titulo-maior {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      background-color: #a1cc42;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 15px;
+      color: #1c3a14;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .faça-voce-mesmo {
+      background-color: #a1cc42;
+      border-radius: 15px;
+      padding: 15px;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .conteudo p {
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .conteudo strong {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <span>Raízes do Amanhã</span>
+  </div>
+
+  <div id="side-menu">
+    <ul>
+      <li><a href="contato.html">📞 Nosso Contato</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="#">📚 Curso Técnico</a></li>
+      <li><a href="lojas.html">🛍️ Lojas</a></li>
+      <li><a href="portal.natureza.html">🌱 Portal Natureza</a></li>
+      <li><a href="#">🔐 Login</a></li>
+      <li><a href="curso-tecnico.html">📚 Curso Técnico</a></li>
+    </ul>
+  </div>
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div class="conteudo">
+    <p class="titulo-menor">Você está no</p>
+    <h1 class="titulo-maior">☆ Portal Natureza ☆</h1>
+
+    <p>• Neste local você terá instruções, tutoriais, e ideias de como ter uma vida mais sustentável e verde!</p>
+
+    <h2>-> Primeiramente... como eu reciclo?</h2>
+
+    <p>• Reciclar é algo que pode ser feito com um simples ato que você muda na sua própria casa, sem muito esforço, e pode mudar todo um ciclo de descarte e reciclagem. Você pode começar a reciclagem mudando a forma que você descarta o seu lixo!</p>
+
+    <p><strong>• Você faz o descarte de reciclagem da maneira correta?</strong></p>
+
+    <p>• O descarte de recicláveis em casa deve ser feito separando os materiais limpos e secos (sendo de materiais recicláveis que são plásticos, vidros e papéis) do lixo comum, colocando-os em sacos próprios para a coleta seletiva.</p>
+
+    <p><strong>Metal e eletrônicos também podem ser reciclados!</strong></p>
+
+    <p>• Porém eles devem ser descartados em lugares ideais para descarte de eletrônicos, que estão localizados em espaços diferentes dependendo da sua cidade. Se informe sobre os pontos de descarte na sua cidade em: <a href="https://abree.org.br/" target="_blank" rel="noopener noreferrer">https://abree.org.br/</a></p>
+
+    <div class="faça-voce-mesmo">FAÇA VOCÊ MESMO</div>
+
+    <p>• Nós da Raízes do Amanhã, juntamente com diversos criadores de conteúdo, temos uma rede de tutoriais atendendo exatamente à sua ideia, para te inspirar e ajudar você e o meio ambiente!</p>
+
+    <p><strong>ABREE - Associação Brasileira de Reciclagem de Eletroeletrônicos e Eletrodomésticos</strong></p>
+    <p>ABREE - Associação Brasileira de Reciclagem de Eletroeletrônicos e Eletrodomésticos fundada em 29 de junho de 2011</p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('side-menu').classList.toggle('open');
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeMenu() {
+      document.getElementById('side-menu').classList.remove('open');
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
