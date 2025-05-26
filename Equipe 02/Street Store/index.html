@@ -1,198 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Raízes do Amanhã</title>
- 
-  <!-- Fonts Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
- 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #d1f7b5;
-      color: #1e3924;
-    }
- 
-    /* Top bar com menu horizontal */
-    .top-bar {
-      background-color: #5ba140;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
- 
-    .folha-icon {
-      height: 30px;
-    }
- 
-    nav.menu {
-      flex-grow: 1;
-      margin-left: 20px;
-    }
- 
-    .menu-list {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
- 
-    .menu-list li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      padding: 6px 8px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
- 
-    .menu-list li a:hover {
-      background-color: #4a8b2e;
-    }
- 
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
- 
-    /* Conteúdo principal */
-    .conteudo {
-      padding: 40px 20px;
-      text-align: center;
-    }
- 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px;
-      background-color: #a1cc42;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 15px;
-      color: #1c3a14;
-      margin-top: 10px;
-    }
- 
-    h2 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
- 
-    .sobre h3 {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 40px;
-      color: #1c3a14;
-    }
- 
-    .sobre p {
-      font-size: 17px;
-      line-height: 1.7;
-      max-width: 750px;
-      margin: 10px auto;
-    }
- 
-    .rodape {
-      background-color: #5ba140;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
- 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .menu-list {
-        display: none;
-        flex-direction: column;
-        background-color: #5ba140;
-        position: absolute;
-        top: 55px;
-        right: 20px;
-        width: 180px;
-        border-radius: 6px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      }
- 
-      .menu-list.show {
-        display: flex;
-      }
- 
-      .menu-list li {
-        padding: 10px;
-      }
- 
-      .menu-toggle {
-        display: block;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top-bar">
-    <img src="folha.png" alt="Folha" class="folha-icon" />
-    <nav class="menu" role="navigation" aria-label="Menu principal">
-      <ul class="menu-list" id="menu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="curso.html">CURSO TÉCNICO</a></li>
-        <li><a href="lojas.html">LOJAS</a></li>
-        <li><a href="contato.html">NOSSO CONTATO</a></li>
-        <li><a href="portal.html">PORTAL NATUREZA</a></li>
-        <li><a href="login.html">LOGIN</a></li>
-      </ul>
-    </nav>
-    <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu" class="menu-toggle">☰</button>
-  </header>
- 
-  <main class="conteudo">
-    <h2>seja bem vindo(a)</h2>
-    <h1>Raízes do Amanhã</h1>
- 
-    <section class="sobre">
-      <h3>🌿 Sobre nós 🌿</h3>
-      <p>Somos um espaço dedicado a dar visibilidade a pequenas ações sustentáveis e oferecer cursos técnicos acessíveis na área de sustentabilidade, agricultura e empreendedorismo verde.</p>
-      <p>Acreditamos que cada pequena iniciativa pode gerar grandes transformações. Por isso, reunimos conhecimento, práticas e histórias inspiradoras para quem quer crescer fazendo o bem ao planeta.</p>
-      <p>Seja bem-vindo(a)! Aqui, suas ideias sustentáveis têm voz.</p>
-    </section>
-  </main>
- 
-  <footer class="rodape">
-    <p>🌱 Raízes do Amanhã © 2025</p>
-  </footer>
- 
+
+  <div class="top-bar">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <span>Raízes do Amanhã</span>
+  </div>
+
+  <div id="side-menu">
+    <ul>
+      <li><a href="contato.html">📞 Nosso Contato</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="#">📚 Curso Técnico</a></li>
+      <li><a href="lojas.html">🛍️ Lojas</a></li>
+      <li><a href="#">🌱 Portal Natureza</a></li>
+      <li><a href="#">🔐 Login</a></li>
+    </ul>
+  </div>
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div class="conteudo">
+    <h1>Bem-vindo ao Raízes do Amanhã!</h1>
+    <p class="intro">Explore nosso site para conhecer mais sobre sustentabilidade, cursos técnicos, e muito mais. Aqui, você vai encontrar conteúdos que valorizam o meio ambiente e práticas sustentáveis para um futuro melhor.</p>
+    
+    <div class="sobre-nos">
+      <h2>🌿 Sobre nós 🌿</h2>
+      <p>Somos um espaço dedicado a dar visibilidade a pequenos negócios sustentáveis e oferecer cursos técnicos acessíveis nas áreas de sustentabilidade, agricultura e empreendedorismo verde.</p>
+      <p>Acreditamos que cada pequena iniciativa pode gerar grandes transformações. Por isso, reunimos conhecimento, práticas conscientes e histórias inspiradoras para quem quer crescer fazendo a diferença.</p>
+      <p>Seja bem-vindo(a). Aqui, suas ideias sustentáveis têm voz, valor e futuro. 🌱</p>
+    </div>
+  </div>
+
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuList = document.querySelector('.menu-list');
- 
-    menuToggle.addEventListener('click', () => {
-      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-      menuToggle.setAttribute('aria-expanded', !expanded);
-      menuList.classList.toggle('show');
-    });
- 
-    // Fecha o menu se clicar fora dele
-    document.addEventListener('click', (e) => {
-      if (!menuList.contains(e.target) && !menuToggle.contains(e.target)) {
-        menuList.classList.remove('show');
-        menuToggle.setAttribute('aria-expanded', false);
-      }
-    });
+    function toggleMenu() {
+      document.getElementById('side-menu').classList.toggle('open');
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeMenu() {
+      document.getElementById('side-menu').classList.remove('open');
+      document.getElementById('overlay').style.display = 'none';
+    }
   </script>
+
 </body>
 </html>
- 
