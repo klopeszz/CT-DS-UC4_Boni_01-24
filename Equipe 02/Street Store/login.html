@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Raízes do Amanhã</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-container {
+      background-color: #a1cc42;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 400px;
+      margin: 50px auto;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .login-container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1c3a14;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #1e3924;
+    }
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1c3a14;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-container button:hover {
+      background-color: #163010;
+    }
+    .extra-options {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .extra-options a {
+      display: block;
+      margin: 5px 0;
+      color: #1e3924;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .extra-options a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <span>Raízes do Amanhã</span>
+  </div>
+
+  <div id="side-menu">
+    <ul>
+      <li><a href="contato.html">📞 Nosso Contato</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="#">📚 Curso Técnico</a></li>
+      <li><a href="lojas.html">🛍️ Lojas</a></li>
+      <li><a href="portal.natureza.html">🌱 Portal Natureza</a></li>
+      <li><a href="login.html">🔐 Login</a></li>
+      <li><a href="curso-tecnico.html">📚 Curso Técnico</a></li>
+    </ul>
+  </div>
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div class="login-container">
+    <h1>🔐 Login</h1>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <div class="extra-options">
+      <a href="#">🔑 Esqueceu a senha?</a>
+      <a href="#">📝 Criar conta</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('side-menu').classList.toggle('open');
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeMenu() {
+      document.getElementById('side-menu').classList.remove('open');
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
