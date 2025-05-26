@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato - Raízes do Amanhã</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <span>Raízes do Amanhã</span>
+  </div>
+
+  <div id="side-menu">
+    <ul>
+      <li><a href="contato.html">📞 Nosso Contato</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="#">📚 Curso Técnico</a></li>
+      <li><a href="lojas.html">🛍️ Lojas</a></li>
+      <li><a href="#">🌱 Portal Natureza</a></li>
+      <li><a href="#">🔐 Login</a></li>
+    </ul>
+  </div>
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div class="conteudo">
+    <h1>📞 Nosso Contato</h1>
+    <div class="contato-card">
+      <strong>Fale conosco!</strong>
+    </div>
+    <p>☎️ (11) 4002-1234</p>
+    <p>Email: atendimento@raizesdoamanha.com.br</p>
+    <p>Endereço: Avenida das Araucárias, no 1234<br>Bairro Verde Sustentável<br>Cidade do Sol-SP<br>CEP: 12345-678</p>
+    <p><strong>Atendimento para curso técnico:</strong><br>Email: cursos@raizesdoamanha.com.br</p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('side-menu').classList.toggle('open');
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeMenu() {
+      document.getElementById('side-menu').classList.remove('open');
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
