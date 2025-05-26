@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursos Técnicos - Raízes do Amanhã</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Coloquei o CSS só para o conteúdo da página */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #d1f7b5;
+      color: #1e3924;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      background-color: #a1cc42;
+      color: #1c3a14;
+      padding: 15px 20px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .titulo-quadrado {
+      background-color: #a1cc42;
+      border-radius: 15px;
+      font-weight: bold;
+      padding: 15px 20px;
+      font-size: 20px;
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #1c3a14;
+    }
+    .descricao {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      white-space: pre-wrap;
+    }
+    .lista-cursos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .curso-item {
+      background-color: #c6deb1;
+      border-radius: 15px;
+      padding: 15px 20px;
+      flex: 1 1 250px;
+      color: #1e3924;
+      font-weight: 500;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    .curso-item:hover {
+      background-color: #b0c88a;
+      cursor: default;
+    }
+    .chamada-final {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #1c3a14;
+    }
+    .disciplinas {
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .botao-inscrever {
+      background-color: #a1cc42;
+      color: #1c3a14;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 15px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .botao-inscrever:hover {
+      background-color: #8ab635;
+    }
+    .texto-ao-lado {
+      display: inline-block;
+      font-family: 'Arial', sans-serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #1c3a14;
+      vertical-align: middle;
+      max-width: 400px;
+    }
+    @media (max-width: 600px) {
+      .lista-cursos {
+        flex-direction: column;
+      }
+      .botao-inscrever, .texto-ao-lado {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 15px;
+        max-width: 100%;
+      }
+      .texto-ao-lado {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="side-menu">
+    <ul>
+      <li><a href="contato.html">📞 Nosso Contato</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="#">📚 Curso Técnico</a></li>
+      <li><a href="lojas.html">🛍️ Lojas</a></li>
+      <li><a href="portal.natureza.html">🌱 Portal Natureza</a></li>
+      <li><a href="#">🔐 Login</a></li>
+      <li><a href="curso-tecnico.html">📚 Curso Técnico</a></li>
+    </ul>
+  </div>
+
+  <h1>Cursos Técnicos</h1>
+
+  <div class="titulo-quadrado">🎓 | Cursos Técnicos em Sustentabilidade</div>
+
+  <p class="descricao">
+    Seja protagonista da transformação que o mundo precisa. Nesta seção, você encontra cursos técnicos voltados para a área ambiental, ideais para quem deseja atuar com certificação ambiental, energias renováveis, gestão de resíduos, agricultura orgânica, entre outras áreas essenciais para um futuro mais sustentável. Os cursos oferecidos são uma excelente porta de entrada para quem quer se profissionalizar, empreender ou atuar como freelancer em projetos ecológicos. São formações que combinam conhecimento técnico, prática de campo e impacto real na sociedade. Explore, descubra e repense sua forma de consumir.
+  </p>
+
+  <div class="titulo-quadrado" style="margin-bottom: 15px;">🔎 | Descubra cursos em:</div>
+
+  <div class="lista-cursos">
+    <div class="curso-item">Certificação e gestão ambiental</div>
+    <div class="curso-item">Agricultura sustentável e agroecologia</div>
+    <div class="curso-item">Energias limpas (solar, eólica, biomassa)</div>
+    <div class="curso-item">Tecnologias verdes e inovação ecológica</div>
+    <div class="curso-item">Empreendedorismo sustentável</div>
+  </div>
+
+  <p class="chamada-final">
+    🖌 | COMECE AGORA A CONSTRUIR UMA CARREIRA COM PROPÓSITO E AJUDE A TRANSFORMAR COMUNIDADES E EMPRESAS POR MEIO DO CONHECIMENTO!
+  </p>
+
+  <h2 style="color: #1c3a14; font-family: 'Playfair Display', serif;">Sobre o Curso Técnico em Certificação e Gestão Ambiental:</h2>
+
+  <pre class="disciplinas">
+Lista das disciplinas (exemplos):
+
+* Diploma de Técnico em Certificação e Gestão Ambiental, reconhecido pelo MEC, ao concluir o curso.
+* Fundamentos de Gestão Ambiental
+* Licenciamento Ambiental
+* Sistemas de Gestão (ISO 14001)
+* Auditoria Ambiental
+* Tratamento de Resíduos
+* Educação Ambiental
+* Legislação Ambiental
+* Projetos Ambientais
+* Modalidade: presencial, online ou híbrido.
+* Duração total: 1600 horas.
+
+* Possibilidade de atuar em processos relacionados a certificações como:
+
+* ISO 14001 (Gestão Ambiental)
+* ISO 9001 (Qualidade)
+* FSC (Manejo Florestal Sustentável)
+* Certificação Orgânica
+* Selo Verde e outros selos ambientais
+  </pre>
+
+  <a href="#" class="botao-inscrever">INSCREVER-SE</a>
+  <span class="texto-ao-lado">Formando profissionais preparados para proteger o meio ambiente e promover a sustentabilidade.</span>
+
+</body>
+</html>
